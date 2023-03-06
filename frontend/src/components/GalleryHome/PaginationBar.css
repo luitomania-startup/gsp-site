@@ -1,0 +1,179 @@
+.page-link-home {
+  position: relative;
+  display: block;
+  padding: var(--bs-pagination-home-padding-y) var(--bs-pagination-home-padding-x);
+  font-size: var(--bs-pagination-home-font-size);
+  color: var(--bs-pagination-home-color);
+  text-decoration: none;
+  background-color: var(--bs-pagination-home-bg);
+  border: var(--bs-pagination-home-border-width) solid var(--bs-pagination-home-border-color);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-link-home {
+    transition: none;
+  }
+}
+
+.page-link-home:hover {
+  z-index: 2;
+  color: var(--bs-pagination-home-hover-color);
+  background-color: var(--bs-pagination-home-hover-bg);
+  border-color: var(--bs-pagination-home-hover-border-color);
+}
+
+.page-link-home:focus {
+  z-index: 3;
+  color: var(--bs-pagination-home-focus-color);
+  background-color: var(--bs-pagination-home-focus-bg);
+  outline: 0;
+  box-shadow: var(--bs-pagination-home-focus-box-shadow);
+}
+
+.page-link-home.active-home,
+.active-home>.page-link-home {
+  z-index: 3;
+  color: var(--bs-pagination-home-active-home-color);
+  background-color: var(--bs-pagination-home-active-home-bg);
+  border-color: var(--bs-pagination-home-active-home-border-color);
+}
+
+.page-link-home.disabled,
+.disabled>.page-link-home {
+  color: var(--bs-pagination-home-disabled-color);
+  pointer-events: none;
+  background-color: var(--bs-pagination-home-disabled-bg);
+  border-color: var(--bs-pagination-home-disabled-border-color);
+}
+
+.page-item-home:not(:first-child) .page-link-home {
+  margin-left: -1px;
+}
+
+.page-item-home:first-child .page-link-home {
+  border-top-left-radius: var(--bs-pagination-home-border-radius);
+  border-bottom-left-radius: var(--bs-pagination-home-border-radius);
+}
+
+.page-item-home:last-child .page-link-home {
+  border-top-right-radius: var(--bs-pagination-home-border-radius);
+  border-bottom-right-radius: var(--bs-pagination-home-border-radius);
+}
+
+.page-item-home:not(:first-child) .page-link-home {
+  margin-left: -1px;
+}
+
+.page-item-home:first-child .page-link-home {
+  border-top-left-radius: var(--bs-pagination-home-border-radius);
+  border-bottom-left-radius: var(--bs-pagination-home-border-radius);
+}
+
+.page-item-home:last-child .page-link-home {
+  border-top-right-radius: var(--bs-pagination-home-border-radius);
+  border-bottom-right-radius: var(--bs-pagination-home-border-radius);
+}
+
+.pagination-home {
+  --bs-pagination-home-padding-x: 0.75rem;
+  --bs-pagination-home-padding-y: 0.375rem;
+  --bs-pagination-home-font-size: 1rem;
+  --bs-pagination-home-color: #006F37;
+  --bs-pagination-home-bg: rgba(255, 250, 148, 0.3);
+  --bs-pagination-home-border-width: 1px;
+  --bs-pagination-home-border-color: #dee2e6;
+  --bs-pagination-home-border-radius: 0.375rem;
+  --bs-pagination-home-hover-color: var(--bs-link-hover-color);
+  --bs-pagination-home-hover-bg: #E4FFF2;
+  --bs-pagination-home-hover-border-color: #d3fde9;
+  --bs-pagination-home-focus-color: var(--bs-link-hover-color);
+  --bs-pagination-home-focus-bg: #E4FFF2;
+  --bs-pagination-home-focus-box-shadow: 0 0 0 0.25rem rgba(13, 217, 253, 0.25);
+  --bs-pagination-home-active-home-color: #fff;
+  --bs-pagination-home-active-home-bg: #00A652;
+  --bs-pagination-home-active-home-border-color: #026935;
+  --bs-pagination-home-disabled-color: #5d7974;
+  --bs-pagination-home-disabled-bg: #ddffee;
+  --bs-pagination-home-disabled-border-color: #dee2e6;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+.page-link-home {
+  position: relative;
+  display: block;
+  padding: var(--bs-pagination-home-padding-y) var(--bs-pagination-home-padding-x);
+  font-size: var(--bs-pagination-home-font-size);
+  color: var(--bs-pagination-home-color);
+  text-decoration: none;
+  background-color: yellow;
+  border: var(--bs-pagination-home-border-width) solid var(--bs-pagination-home-border-color);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-link-home {
+    transition: none;
+  }
+}
+
+.page-link-home:hover {
+  z-index: 2;
+  color: var(--bs-pagination-home-hover-color);
+  background-color: var(--bs-pagination-home-hover-bg);
+  border-color: var(--bs-pagination-home-hover-border-color);
+}
+
+.page-link-home:focus {
+  z-index: 3;
+  color: var(--bs-pagination-home-focus-color);
+  background-color: var(--bs-pagination-home-focus-bg);
+  outline: 0;
+  box-shadow: var(--bs-pagination-home-focus-box-shadow);
+}
+
+.page-link-home.active-home,
+.active-home>.page-link-home {
+  z-index: 3;
+  color: var(--bs-pagination-home-active-home-color);
+  background-color: var(--bs-pagination-home-active-home-bg);
+  border-color: var(--bs-pagination-home-active-home-border-color);
+}
+
+.page-link-home.disabled,
+.disabled>.page-link-home {
+  color: var(--bs-pagination-home-disabled-color);
+  pointer-events: none;
+  background-color: var(--bs-pagination-home-disabled-bg);
+  border-color: var(--bs-pagination-home-disabled-border-color);
+}
+
+.page-item-home:not(:first-child) .page-link-home {
+  margin-left: -1px;
+}
+
+.page-item-home:first-child .page-link-home {
+  border-top-left-radius: var(--bs-pagination-home-border-radius);
+  border-bottom-left-radius: var(--bs-pagination-home-border-radius);
+}
+
+.page-item-home:last-child .page-link-home {
+  border-top-right-radius: var(--bs-pagination-home-border-radius);
+  border-bottom-right-radius: var(--bs-pagination-home-border-radius);
+}
+
+.pagination-home-lg {
+  --bs-pagination-home-padding-x: 1.5rem;
+  --bs-pagination-home-padding-y: 0.75rem;
+  --bs-pagination-home-font-size: 1.25rem;
+  --bs-pagination-home-border-radius: 0.5rem;
+}
+
+.pagination-home-sm {
+  --bs-pagination-home-padding-x: 0.5rem;
+  --bs-pagination-home-padding-y: 0.25rem;
+  --bs-pagination-home-font-size: 0.875rem;
+  --bs-pagination-home-border-radius: 0.25rem;
+}

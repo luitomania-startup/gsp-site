@@ -1,0 +1,90 @@
+<div className=" mt-10 overflow-hidden">
+          <div
+            className="mx-auto mb-20 grid w-[90%] gap-10 sm:grid-cols-2 lg:grid-cols-4"
+            style={{ fontFamily: "Open Sans", fontSize: "1.1rem" }}
+          >
+            
+            {posts.map((items, key) => (
+              <div
+                className=" w-full rounded-md shadow-md transition-all duration-300 ease-in-out hover:scale-[102%] hover:cursor-pointer lg:max-w-lg"
+                key={key}
+                onClick={() => onClickHandler(items.imageUrl)}
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModalCenter"
+                role="presentation"
+              >
+                <img
+                  className="rounded-t-md object-contain"
+                  src={items.imageUrl}
+                  alt={items.title}
+                />
+                <div className="rounded-b-md p-4 dark:bg-[#e4fff2]">
+                  {/* <h4 className="text-xl font-semibold text-blue-600">
+                {items.title}
+              </h4> */}
+                  {items.description.trim().length === 0 ? <></> : (<p className="mb-2 leading-normal  dark:bg-[#e4fff2]">
+                    {items.description.length < 50 ? (
+                      HTMLReactParser(items.description || "")
+                    ) : (
+                      <>
+                        {HTMLReactParser(items.description.slice(0, 50) || "")}
+                        ...
+                      </>
+                    )}
+                  </p>)}
+                  {/* <button className="rounded bg-blue-500 px-4 py-2 text-sm text-blue-100 shadow">
+                Read more
+              </button> */}
+                </div>
+              </div>
+            ))}
+          </div>
+          {showModal ? (
+            <div
+              className="modal fade mt-30 fixed  top-0 grid  h-full w-full  justify-items-center outline-none"
+              role="dialog"
+              style={{ background: "rgba(0, 0, 0, 0.3)", zIndex: 200 }}
+              onClick={() => {
+                // console.log("iframeMouseOver", iframeMouseOver);
+                if (iframeMouseOver) {
+                  // setShowModal(false);\
+                  setShowModal(false);
+                  toggleScrollbar();
+                }
+              }}
+            >
+              <div className="modal-dialog modal-dialog-centered pointer-events-none relative w-full h-full">
+                <div className="modal-content pointer-events-auto  relative flex w-full h-full flex-col rounded-md  border-none bg-clip-padding text-current outline-none">
+                  <div className="modal-header flex flex-shrink-0 items-center justify-between rounded-t-md p-4">
+                    <button
+                      type="button"
+                      className="btn-close absolute right-0 z-[200] mx-10 mt-10 box-content rounded-none border-none p-1 text-white opacity-50 hover:text-black hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+                      onClick={() => {
+                        setShowModal(false);
+                        toggleScrollbar();
+                      }}
+                    >
+                      <img
+                        src={CloseIcon}
+                        alt="close"
+                        className="h-[30px] w-[30px] "
+                      />
+                    </button>
+                  </div>
+                  <div className="modal-body  relative mx-auto p-4 flex object-contain w-full h-full">
+                    <img
+                      className="items-center rounded-md mx-auto"
+                      src={currentImg}
+                      alt={currentImg}
+                      ref={modalReference}
+                      onMouseOver={() => setIframeMouseOver(false)}
+                      onMouseOut={() => setIframeMouseOver(true)}
+                    />
+                  </div>
+                  <div className="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md  p-4"></div>
+                </div>
+              </div>
+            </div>
+          ) : null}
+          
+        </div>
